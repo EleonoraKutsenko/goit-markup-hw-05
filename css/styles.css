@@ -88,6 +88,7 @@ img {
     justify-content: center;
     align-items: center;
     fill: var(--icon-gray-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -133,7 +134,8 @@ header {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--dark-text-color);    
+    color: var(--dark-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-item:not(:last-child) {
@@ -155,6 +157,7 @@ header {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--gray-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-email, .icon-phone {
@@ -215,6 +218,7 @@ header {
     border-color: transparent;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover, .hero-btn:focus {
@@ -349,6 +353,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover, .clients-link:focus {
@@ -417,7 +422,7 @@ footer .container div:first-of-type {
 .footer-social-item .social-link {
     fill: var(--white-color);
     background-color: var(--icon-dark-gray-color);
-}
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .footer-social-item .social-link:hover,
 .footer-social-item .social-link:focus {
@@ -448,6 +453,9 @@ footer .container div:first-of-type {
     border-radius: 4px;
     border-color: transparent;
     padding: 6px 22px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover, .filter-btn:focus {
@@ -478,6 +486,7 @@ footer .container div:first-of-type {
 
 .portfolio-link {
     display: inline-block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover,
