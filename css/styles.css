@@ -15,6 +15,7 @@
     --overlay-color: #2f303a66;
     --icon-gray-color: #AFB1B8;
     --icon-dark-gray-color: #ffffff1a;
+    --feature-bgcolor: #2f303acc;
 }
 
 body {
@@ -289,8 +290,43 @@ header {
     flex-wrap: wrap;
 }
 
+.feature-item {
+    display: block;
+}
+
 .feature-item:not(:last-child) {
     margin-right: 30px;
+}
+
+.feature-link {
+    position: relative;
+    width: 370px;
+    height: 294px;
+    overflow: hidden;
+    display: block;
+}
+
+.feature-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.feature-desc {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-color);
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: var(--feature-bgcolor);
 }
 
 /* ===team=== */
