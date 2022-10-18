@@ -17,6 +17,7 @@
     --icon-dark-gray-color: #ffffff1a;
     --feature-bgcolor: #2f303acc;
     --portfolio-overlay-color: #2196f3e6;
+    --timing-cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -90,7 +91,7 @@ img {
     justify-content: center;
     align-items: center;
     fill: var(--icon-gray-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms var(--timing-cubic);
 }
 
 .social-link:hover,
@@ -137,7 +138,7 @@ header {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--dark-text-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms var(--timing-cubic);
 }
 
 .menu-item:not(:last-child) {
@@ -171,7 +172,7 @@ header {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--gray-text-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms var(--timing-cubic);
 }
 
 .icon-email, .icon-phone {
@@ -232,7 +233,7 @@ header {
     border-color: transparent;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms var(--timing-cubic);
 }
 
 .hero-btn:hover, .hero-btn:focus {
@@ -402,7 +403,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms var(--timing-cubic), border-color 250ms var(--timing-cubic);
 }
 
 .clients-link:hover, .clients-link:focus {
@@ -471,7 +472,8 @@ footer .container div:first-of-type {
 .footer-social-item .social-link {
     fill: var(--white-color);
     background-color: var(--icon-dark-gray-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+    transition: background-color 250ms var(--timing-cubic);
+}
 
 .footer-social-item .social-link:hover,
 .footer-social-item .social-link:focus {
@@ -502,9 +504,9 @@ footer .container div:first-of-type {
     border-radius: 4px;
     border-color: transparent;
     padding: 6px 22px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms var(--timing-cubic),
+    background-color 250ms var(--timing-cubic),
+    box-shadow 250ms var(--timing-cubic);
 }
 
 .filter-btn:hover, .filter-btn:focus {
@@ -523,8 +525,6 @@ footer .container div:first-of-type {
     display: inline-block;
     background-color: var(--white-color);
     flex-basis: calc((100% - 60px)/3);
-    overflow: hidden;
-    position: relative;
 }
 
 .portfolio-card:not(:nth-child(3n)) {
@@ -537,12 +537,38 @@ footer .container div:first-of-type {
 
 .portfolio-link {
     display: inline-block;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms var(--timing-cubic);
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-card-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--portfolio-overlay-color);
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--white-color);
+    margin: 0;
+    padding: 63px 24px;
+    transform: translateY(100%);
+    transition: transform 250ms var(--timing-cubic);
+}
+
+.portfolio-card:hover .portfolio-overlay {
+    transform: translateY(0);
 }
 
 .portfolio-card-text {
@@ -566,25 +592,4 @@ footer .container div:first-of-type {
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--gray-text-color);
-}
-
-.portfolio-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--portfolio-overlay-color);
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    color: var(--white-color);
-    margin: 0;
-    padding: 63px 24px;
-    transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-card:hover .portfolio-overlay {
-    transform: translateY(0);
 }
