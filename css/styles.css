@@ -319,6 +319,10 @@ header {
     position: absolute;
     bottom: 0;
     width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -327,8 +331,6 @@ header {
     text-transform: uppercase;
     color: var(--white-color);
     margin: 0;
-    padding-top: 27px;
-    padding-bottom: 27px;
     background-color: var(--feature-bgcolor);
 }
 
@@ -404,7 +406,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: color 250ms var(--timing-cubic), border-color 250ms var(--timing-cubic);
+    transition: fill 250ms var(--timing-cubic), border-color 250ms var(--timing-cubic);
 }
 
 .clients-link:hover, .clients-link:focus {
